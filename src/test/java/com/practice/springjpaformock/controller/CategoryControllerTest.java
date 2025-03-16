@@ -135,7 +135,7 @@ public class CategoryControllerTest {
 
         mockMvc.perform(get("/categories"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$").isArray()) // Ожидаем массив в корне JSON
+                .andExpect(jsonPath("$").isArray()) 
                 .andExpect(jsonPath("$[0].id").value(1))
                 .andExpect(jsonPath("$[0].name").value("Наушники"))
                 .andExpect(jsonPath("$[1].id").value(2))
